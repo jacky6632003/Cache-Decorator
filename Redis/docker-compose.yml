@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  redis:
+    image: redis
+    restart: always
+    command: redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/var/lib/redis
+      
+volumes:
+  redis-data:
+    driver: local

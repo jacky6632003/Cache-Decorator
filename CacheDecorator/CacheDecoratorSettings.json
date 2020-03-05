@@ -1,0 +1,12 @@
+{
+  {
+    "CacheDecoratorSettings": {
+      "CacheProviders": [ "MemoryCacheProvider", "RedisCacheProvider" ],
+      "CacheDecorators": [
+        {
+          "Declaration": "IFooRepository",
+          "Implements": [ "FooRepository", "RedisFooRepository", "CachedFooRepository" ]
+        }
+      ]
+    }
+  }
